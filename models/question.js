@@ -2,33 +2,19 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const questionSchema = new Schema({
-    id: {
+    apiId: {
         type: Number,
-        required: true,
-        unique: true,
+        unique: true
     },
     question: {
         type: String,
-        required: true
     },
-    answers: {
-        answer_a: {
-            type: String
-        },
-        answer_b: {
-            type: String
-        },
-        answer_c: {
-            type: String
-        },
-        answer_d: {
-            type: String
-        },
-        required: true
+    choices: {},
+    answer: {
+        type: String
     },
-    correct_answer: {
-        type: String,
-        required: true
+    tag: {
+        type: String
     },
     category: {
         type: String
