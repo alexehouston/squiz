@@ -29,7 +29,7 @@ Squiz is a full MERN-stack single-page web application & quiz game created with 
 
 <details>
     <summary>:file_folder: ERD</summary>
-        <img src="public/img/erd.png" width="800">
+        <p align="center"><img src="public/img/erd.png" width="800"></p>
 </details>
 
 <details>
