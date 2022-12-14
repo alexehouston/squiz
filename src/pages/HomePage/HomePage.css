@@ -1,0 +1,17 @@
+h1 {
+    font-family: '04B';
+    font-size: 10vmin;
+}
+
+h2 {
+    font-family: 'Daydream';
+    font-size: 2vmin;
+    margin-top: -4vmin;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }

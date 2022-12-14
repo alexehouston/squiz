@@ -1,0 +1,16 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome {
+    font-family: 'VT323', monospace;
+    text-transform: uppercase;
+    font-size: 3vmin;
+}
+
+.logout {
+    font-family: '04B', monospace;
+    font-size: 2.5vmin;
+}
