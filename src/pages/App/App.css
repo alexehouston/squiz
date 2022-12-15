@@ -11,6 +11,7 @@
 }
 
 .App {
+  color: white;
   text-align: center;
 }
 
@@ -21,7 +22,7 @@
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  z-index: 0;
+  z-index: -5;
 }
 
 form {

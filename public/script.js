@@ -48,16 +48,16 @@ class Layer {
     }
 }
 
-const FirstLayer = new Layer(One, 1.1, 0);
-const SecondLayer = new Layer(Two, 1, 0);
-const ThirdLayer = new Layer(Three, .9, 0);
-const FourthLayer = new Layer(Four, .8, 0);
-const FifthLayer = new Layer(Five, .7, 0);
-const SixthLayer = new Layer(Six, .6, 0);
-const SeventhLayer = new Layer(Seven, .5, 0);
-const EighthLayer = new Layer(Eight, .4, 0);
-const NinthLayer = new Layer(Nine, .3, 0);
-const TenthLayer = new Layer(Ten, .2, 0);
+const FirstLayer = new Layer(One, .8, 0);
+const SecondLayer = new Layer(Two, .55, 0);
+const ThirdLayer = new Layer(Three, .5, 0);
+const FourthLayer = new Layer(Four, .45, 0);
+const FifthLayer = new Layer(Five, .4, 0);
+const SixthLayer = new Layer(Six, .35, 0);
+const SeventhLayer = new Layer(Seven, .3, 0);
+const EighthLayer = new Layer(Eight, .25, 0);
+const NinthLayer = new Layer(Nine, .2, 0);
+const TenthLayer = new Layer(Ten, .15, 0);
 const EleventhLayer = new Layer(Eleven, .1, 0);
 const TwelfthLayer = new Layer(Twelve, 0, 0);
 

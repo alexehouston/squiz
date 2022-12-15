@@ -1,3 +1,4 @@
+import { Link } from 'react';
 import './HomePage.css';
 
 export default function HomePage() {
@@ -5,8 +6,8 @@ export default function HomePage() {
         <main>
             <h1>Squiz</h1>
             <h2>Test your knowledge!</h2>
-            <div class="pixel"><p>Play</p></div>
-            <div class="pixel"><p>Scores</p></div>
+            <div className="pixel"><p>Play</p></div>
+            <div className="pixel"><p>Scores</p></div>
         </main>
     );
 }

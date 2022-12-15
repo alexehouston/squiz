@@ -15,7 +15,7 @@ export default function AuthPage({ user, setUser }) {
       </>
     :
       <>
-        <button class="pixel" onClick={() => setShowSignUp(!showSignUp)}>{showSignUp ? 'Log In' : 'Sign Up'}</button>
+        <button className="pixel" onClick={() => setShowSignUp(!showSignUp)}>{showSignUp ? 'Log In' : 'Sign Up'}</button>
         { showSignUp ?
           <SignUpForm setUser={setUser} />
         :
