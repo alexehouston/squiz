@@ -1,5 +1,5 @@
 <div id="header" align="center">
-    <img src="public/img/squiz-logo.png" width="800">
+    <img src="public/img/squiz-logo.png" width="500">
 </div>
 
 <div id="description" align="center">
