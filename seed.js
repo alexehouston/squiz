@@ -2,10 +2,12 @@ require('dotenv').config();
 require('./config/database');
 
 const fetch = require('node-fetch');
+const ROOT_URL = 'https://quizapi.io/api/v1/questions';
+const key = process.env.API_KEY;
 const Question = require('./models/question');
 
 async function getQuestions(req, res, next) {
-    const data = await fetch(`https://quizapi.io/api/v1/questions?apiKey=KfHp9ROQNRv3RTVKOPwJ1gP4XC0ij3nupcHN8Fdz&category=Linux&tags=BASH`);
+    const data = await fetch(`${ROOT_URL}?apiKey=${key}&tags=HTML`);
     const quizData = await data.json();
     for (question of quizData) {
         const exists = await Question.exists({apiId:question.id})

@@ -14,6 +14,16 @@
   text-align: center;
 }
 
+#myCanvas {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -28,4 +38,69 @@ label, button, input, input:-internal-autofill-selected {
 
 a {
   text-decoration: none;
+}
+
+h1 {
+  font-family: '04B';
+  font-size: 10vmin;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: 'Daydream';
+  font-size: 2vmin;
+  margin-top: -4vmin;
+}
+
+/* pixelated buttons */
+
+.pixel {
+  font-size: 25px;
+  color: white;
+  height: auto;
+  margin: 10px;
+  font-family: 'VT323';
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  text-transform: uppercase;
+  cursor: pointer;
+  user-select: none;
+  line-height: 0;
+  border-style: solid;
+  border-width: 20px;
+  border-image: url(https://i.imgur.com/sREM8Yn.png) 20 stretch;
+}
+
+.pixel:active, .pixel2:active, button:active {
+  top: 2px;
+}
+
+.pixel p {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: auto;
+  text-align: center;
+  margin: -20px -20px;
+  line-height: 20px;
+  padding: 10px 20px;
+  background: #000000;
+  background:
+      linear-gradient(135deg, transparent 10px, #000000 0) top left,
+      linear-gradient(225deg, transparent 10px, #000000 0) top right,
+      linear-gradient(315deg, transparent 10px, #000000 0) bottom right,
+      linear-gradient(45deg,  transparent 10px, #000000 0) bottom left;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  background-image:
+      radial-gradient(circle at 0 0, rgba(204,0,0,0) 14px, #000000 15px),
+      radial-gradient(circle at 100% 0, rgba(204,0,0,0) 14px, #000000 15px),
+      radial-gradient(circle at 100% 100%, rgba(204,0,0,0) 14px, #000000 15px),
+      radial-gradient(circle at 0 100%, rgba(204,0,0,0) 14px, #000000 15px);
+}
+
+button {
+  background-color: black;
+  border-radius: 50px;
 }
