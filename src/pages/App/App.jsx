@@ -5,20 +5,22 @@ import AuthPage from '../AuthPage/AuthPage';
 import HomePage from '../HomePage/HomePage';
 import QuizPage from '../QuizPage/QuizPage';
 import NavBar from '../../components/NavBar/NavBar';
-import * as questionsApi from '../../utilities/question-api';
+import Title from '../../components/Title/Title';
 import './App.css';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
+  const [questions, setQuestions] = useState([]);
 
   return (
     <main className="App">
       { user ?
           <>
             <NavBar user={user} setUser={setUser} />
+            <Title />
             <Routes>
-              <Route path="" element={<HomePage />}></Route>
-              <Route path="/quiz" element={<QuizPage />} />
+              <Route path="/" element={<HomePage questions={questions} setQuestions={setQuestions} />}></Route>
+              <Route path="/quiz" element={<QuizPage questions={questions} setQuestions={setQuestions} />} />
             </Routes>
           </>
           :

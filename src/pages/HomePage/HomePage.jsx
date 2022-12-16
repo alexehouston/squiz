@@ -1,20 +1,28 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import Title from '../../components/Title/Title';
+import { useState, useEffect } from 'react';
 import Leaderboard from '../../components/Leaderboard/Leaderboard';
+import * as questionsApi from '../../utilities/question-api';
 import './HomePage.css';
 
-export default function HomePage({ setQuizStart }) {
+export default function HomePage({ questions, setQuestions }) {
     const [isShown, setIsShown] = useState(false);
     const [backButton, setBackButton] = useState(false);
 
-    const handleClick = event => {
+    useEffect(() => {
+        async function fetchQuestions() {
+        const response = await questionsApi.getQuestions();
+        setQuestions(response);
+        console.log(response);
+        };
+        fetchQuestions();
+    }, []);
+
+    const handleClick = evt => {
         setIsShown(current => !current);
     };
 
     return (
         <main>
-            <Title />
             <div className="pixel">
                 <Link to="/quiz"><p>Play</p></Link>
             </div>

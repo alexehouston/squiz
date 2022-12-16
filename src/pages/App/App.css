@@ -36,7 +36,7 @@ form {
   align-items: center;
 }
 
-label, button, input, input:-internal-autofill-selected, span {
+label, button, input, input:-internal-autofill-selected, span, ul, li {
   font-family: 'VT323', sans-serif;
   text-transform: uppercase;
 }
@@ -96,4 +96,14 @@ a {
 button {
   background-color: black;
   border-radius: 50px;
+}
+
+ul, li {
+  list-style-type: '\1F47E';
+  list-style-position: inside;
+}
+
+li span {
+  position: relative;
+  left: 10px;
 }
