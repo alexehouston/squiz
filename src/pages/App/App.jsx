@@ -10,32 +10,6 @@ import './App.css';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
-  const [questions, setQuestions] = useState({});
-    // const [currentIndex, setCurrentIndex] = useState(0);
-    // const [score, setScore] = useState(0);
-    // const [showAnswers, setShowAnswers] = useState(false);
-    let currentQuestions = [];
-
-    useEffect(() => {
-        async function fetchQuestions() {
-        const response = await questionsApi.getQuestions();
-        setQuestions(response);
-        };
-        fetchQuestions();
-    }, []);
-
-    useEffect(() => {
-        async function randomQuestions() {
-            for (let i = 0; i < 20; i++) {
-                let ranNum = Math.floor(Math.random() * questions.length);
-                // while (currentQuestions.includes(questions[ranNum])) {
-                //     ranNum = Math.floor(Math.random() * questions.length);
-                // }
-                currentQuestions.push(questions[ranNum]);
-            };
-        };
-        randomQuestions();
-    }, [questions])
 
   return (
     <main className="App">
@@ -43,8 +17,8 @@ export default function App() {
           <>
             <NavBar user={user} setUser={setUser} />
             <Routes>
-              <Route path="/" element={<HomePage />}></Route>
-              <Route path="/quiz" element={<QuizPage currentQuestions={currentQuestions} />} />
+              <Route path="" element={<HomePage />}></Route>
+              <Route path="/quiz" element={<QuizPage />} />
             </Routes>
           </>
           :
