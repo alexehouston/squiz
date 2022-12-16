@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import AuthPage from '../AuthPage/AuthPage';
@@ -19,7 +19,7 @@ export default function App() {
             <NavBar user={user} setUser={setUser} />
             <Title />
             <Routes>
-              <Route path="/" element={<HomePage questions={questions} setQuestions={setQuestions} />}></Route>
+              <Route path="/" element={<HomePage setQuestions={setQuestions} />}></Route>
               <Route path="/quiz" element={<QuizPage questions={questions} setQuestions={setQuestions} />} />
             </Routes>
           </>

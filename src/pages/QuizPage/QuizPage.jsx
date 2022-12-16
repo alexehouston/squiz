@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Link } from "react";
 import Questionaire from '../../components/Questionaire/Questionaire';
 import * as questionsApi from '../../utilities/question-api';
 import "./QuizPage.css";
@@ -65,7 +65,11 @@ export default function QuizPage({ questions, setQuestions }) {
                 {mappedQuestions[currentIdx]}
             </div> 
             </>
-            : (<><span>Game Over</span><br /><span>You scored {score} points!</span></>)
+            : (<>
+                <span>Game Over</span><br />
+                <span>You scored {score} points!</span><br />
+                <Link to="/home"><span>Start Over</span></Link>
+            </>)
 
             }
         </div>

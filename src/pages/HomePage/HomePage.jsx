@@ -4,7 +4,7 @@ import Leaderboard from '../../components/Leaderboard/Leaderboard';
 import * as questionsApi from '../../utilities/question-api';
 import './HomePage.css';
 
-export default function HomePage({ questions, setQuestions }) {
+export default function HomePage({ setQuestions }) {
     const [isShown, setIsShown] = useState(false);
     const [backButton, setBackButton] = useState(false);
 
@@ -12,7 +12,6 @@ export default function HomePage({ questions, setQuestions }) {
         async function fetchQuestions() {
         const response = await questionsApi.getQuestions();
         setQuestions(response);
-        console.log(response);
         };
         fetchQuestions();
     }, []);
