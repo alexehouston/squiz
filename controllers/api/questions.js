@@ -1,8 +1,10 @@
 const Question = require('../../models/question');
 
 module.exports = {
-    getQuestions
+    startQuiz
 };
 
-function getQuestions(req, res, next) {
+async function startQuiz(req, res, next) {
+    const questions = await Question.find({});
+    res.json(questions);
 }

@@ -1,0 +1,34 @@
+.leaderboard {
+    position: fixed;
+    width: 50vmin;
+    height: 30vmin;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
+
+#window {
+    width: 50vmin;
+}
+
+.coins {
+    display: flex;
+    flex-direction: column;
+    margin: -29vmin 0 0 5vmin;
+}
+
+#coin {
+    width: 5vmin;
+}
+
+.players {
+    display: flex;
+    flex-direction: column;
+    margin: -24.8vmin 0;
+}
+
+.player {
+    font-size: 4vmin;
+    color: black;
+    line-height: 5vmin;
+}

@@ -9,15 +9,15 @@ import './App.css';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
+  const [quizStart, setQuizStart] = useState(false);
 
   return (
     <main className="App">
       { user ?
           <>
             <NavBar user={user} setUser={setUser} />
-            <HomePage />
+            <HomePage/>
             <Routes>
-              <Route path="/home" element={<HomePage />} />
               <Route path="/quiz" element={<QuizPage />} />
             </Routes>
           </>

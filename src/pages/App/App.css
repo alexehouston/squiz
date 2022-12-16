@@ -10,6 +10,10 @@
   src: url('../../../public/fonts/Daydream.ttf');
 }
 
+body {
+  overflow: hidden;
+}
+
 .App {
   color: white;
   text-align: center;
@@ -39,18 +43,6 @@ label, button, input, input:-internal-autofill-selected {
 
 a {
   text-decoration: none;
-}
-
-h1 {
-  font-family: '04B';
-  font-size: 10vmin;
-  text-transform: uppercase;
-}
-
-h2 {
-  font-family: 'Daydream';
-  font-size: 2vmin;
-  margin-top: -4vmin;
 }
 
 /* pixelated buttons */
