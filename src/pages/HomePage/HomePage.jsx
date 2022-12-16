@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import Title from '../../components/Title/Title';
-import QuizPage from '../QuizPage/QuizPage';
 import Leaderboard from '../../components/Leaderboard/Leaderboard';
 import './HomePage.css';
 

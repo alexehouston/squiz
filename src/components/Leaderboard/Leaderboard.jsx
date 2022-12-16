@@ -3,13 +3,13 @@ import './Leaderboard.css';
 export default function Leaderboard() {
     return (
         <div className="leaderboard">
-            <img id ="window" src="/assets/window.jpeg" />
+            <img id ="window" src="/assets/window.jpeg" alt="" />
             <div className="coins">
-                <img id="coin" src="/assets/coin.gif" />
-                <img id="coin" src="/assets/coin.gif" />
-                <img id="coin" src="/assets/coin.gif" />
-                <img id="coin" src="/assets/coin.gif" />
-                <img id="coin" src="/assets/coin.gif" />
+                <img id="coin" src="/assets/coin.gif" alt="" />
+                <img id="coin" src="/assets/coin.gif" alt="" />
+                <img id="coin" src="/assets/coin.gif" alt="" />
+                <img id="coin" src="/assets/coin.gif" alt="" />
+                <img id="coin" src="/assets/coin.gif" alt="" />
             </div>
             <div className="players">
                 <span className="player">100 PTS - Player 1</span>

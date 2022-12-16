@@ -36,7 +36,7 @@ form {
   align-items: center;
 }
 
-label, button, input, input:-internal-autofill-selected {
+label, button, input, input:-internal-autofill-selected, span {
   font-family: 'VT323', sans-serif;
   text-transform: uppercase;
 }
