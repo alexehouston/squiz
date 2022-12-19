@@ -7,9 +7,9 @@ nav {
 .welcome {
     font-family: 'VT323', monospace;
     text-transform: uppercase;
-    font-size: 4vmin;
+    font-size: 3.5vmin;
     position: fixed;
-    top: 2.5%;
+    top: 3%;
     left: 2.5%;
 }
 

@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import Questionaire from '../../components/Questionaire/Questionaire';
+import Logo from '../../components/Logo/Logo';
 import * as questionsApi from '../../utilities/question-api';
 import "./QuizPage.css";
 
 export default function QuizPage({ questions, setQuestions }) {
     const [quiz, setQuiz] = useState([]);
-    const [currentQ, setCurrentQ] = useState({});
     const [currentIdx, setCurrentIdx] = useState(0);
     const [score, setScore] = useState(0);
-    const [showScore, setShowScore] = useState(false);
-    const [chances, setChance] = useState(3);
-    const [showAnswers, setShowAnswers] = useState(false);
+    const [chances, setChances] = useState(3);
 
 
     useEffect(() => {
@@ -32,7 +30,16 @@ export default function QuizPage({ questions, setQuestions }) {
     }, [])
 
     let mappedQuestions = quiz.map((q) => 
-        <Questionaire q={q} key={q._id} currentIdx={currentIdx} setCurrentIdx={setCurrentIdx} />
+        <Questionaire 
+            q={q}
+            key={q._id}
+            currentIdx={currentIdx}
+            setCurrentIdx={setCurrentIdx}
+            score={score}
+            setScore={setScore}
+            chances={chances}
+            setChances={setChances}
+         />
     )
 
     // const handleAnswer = (correct) => {
@@ -59,9 +66,14 @@ export default function QuizPage({ questions, setQuestions }) {
 
     return (
         <div className="quiz">
+            <Logo />
             { currentIdx < 20 ? 
             <>
-            <span>Question {currentIdx + 1} / {mappedQuestions.length}</span>
+            <div className="game-text">
+                <span>Question {currentIdx + 1} / {mappedQuestions.length}</span><br />
+                <span>Lives: {chances} / 3</span><br />
+                <span>Score: {score}</span>
+            </div>
             <div className="questionaire">
                 {mappedQuestions[currentIdx]}
             </div> 
@@ -69,7 +81,7 @@ export default function QuizPage({ questions, setQuestions }) {
             : (<>
                 <span>Game Over</span><br />
                 <span>You scored {score} points!</span><br />
-                <Link to="/home"><span>Start Over</span></Link>
+                <Link to="/"><span>Start Over</span></Link>
             </>)
 
             }

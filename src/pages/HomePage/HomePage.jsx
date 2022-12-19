@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Leaderboard from '../../components/Leaderboard/Leaderboard';
+import Title from '../../components/Title/Title';
 import * as questionsApi from '../../utilities/question-api';
 import './HomePage.css';
 
@@ -22,6 +23,7 @@ export default function HomePage({ setQuestions }) {
 
     return (
         <main>
+            <Title />
             <div className="pixel">
                 <Link to="/quiz"><p>Play</p></Link>
             </div>

@@ -10,8 +10,7 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <>
-      <span className="welcome">Welcome, {user.name}!</span>
-      <br />
+      <span className="welcome">Logged in as {user.name}</span>
       <Link className="logout" to="" onClick={handleLogOut}><div className="pixel" id="logout"><p>Log Out</p></div></Link>
     </>
   );

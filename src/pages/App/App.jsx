@@ -5,7 +5,6 @@ import AuthPage from '../AuthPage/AuthPage';
 import HomePage from '../HomePage/HomePage';
 import QuizPage from '../QuizPage/QuizPage';
 import NavBar from '../../components/NavBar/NavBar';
-import Title from '../../components/Title/Title';
 import './App.css';
 
 export default function App() {
@@ -17,7 +16,6 @@ export default function App() {
       { user ?
           <>
             <NavBar user={user} setUser={setUser} />
-            <Title />
             <Routes>
               <Route path="/" element={<HomePage setQuestions={setQuestions} />}></Route>
               <Route path="/quiz" element={<QuizPage questions={questions} setQuestions={setQuestions} />} />

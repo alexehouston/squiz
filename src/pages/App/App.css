@@ -42,6 +42,7 @@ label, button, input, input:-internal-autofill-selected, span, ul, li {
 }
 
 a {
+  color: white;
   text-decoration: none;
 }
 
