@@ -1,7 +1,8 @@
+import Enemy from '../../components/Enemy/Enemy';
 import './Questionaire.css'
 import axios from 'axios';
 
-export default function QuizCard({ q, currentIdx, setCurrentIdx, score, setScore, chances, setChances }) {
+export default function QuizCard({ q, currentIdx, setCurrentIdx, score, setScore, chances, setChances, user }) {
 
     function handleAnswer(evt) {
         evt.preventDefault();
@@ -15,18 +16,16 @@ export default function QuizCard({ q, currentIdx, setCurrentIdx, score, setScore
             setCurrentIdx(currentIdx+1);
         }
         if (chances < 1) {
+            axios.post('/api/quiz', { user: {user}, score: {score} })
             setCurrentIdx(20);
-            axios.post('/api/quiz', { score: {score} })
         }
     }
     
     return (
         <>
             <img className="octocat" src="/assets/octocat.gif" alt="" />
-            <img className="monster" src="/assets/monster.gif" alt="" />
-            <img className="monster" src="/assets/monster.gif" alt="" />
-            <img className="monster" src="/assets/monster.gif" alt="" />
-            <div className="lives">
+            <Enemy />
+            <div id="lives" className="animate__bounceIn">
                 {chances === 3 ? (
                     <>
                         <img className="heart" src="/assets/heart.gif" alt="" />
@@ -47,11 +46,15 @@ export default function QuizCard({ q, currentIdx, setCurrentIdx, score, setScore
             <div className="questionaire-container">
                 <div className="questionaire">
                     <span className="question">{q.question}</span>
-                    <ul>
-                        <li onClick={handleAnswer} value="answer_a" className="choices"><span>{q.choices.answer_a}</span></li>
-                        <li onClick={handleAnswer} value="answer_b" className="choices"><span>{q.choices.answer_b}</span></li>
-                        <li onClick={handleAnswer} value="answer_c" className="choices"><span>{q.choices.answer_c}</span></li>
-                        <li onClick={handleAnswer} value="answer_d" className="choices"><span>{q.choices.answer_d}</span></li>
+                    <ul className="choices">
+                        <li onClick={handleAnswer} value="answer_a"><span>{q.choices.answer_a}</span></li>
+                        <li onClick={handleAnswer} value="answer_b"><span>{q.choices.answer_b}</span></li>
+                        {q.choices.answer_c !== null ? (
+                            <li onClick={handleAnswer} value="answer_c"><span>{q.choices.answer_c}</span></li>
+                        ) : ''}
+                        {q.choices.answer_d !== null ? (
+                            <li onClick={handleAnswer} value="answer_d"><span>{q.choices.answer_d}</span></li>
+                        ) : ''}
                     </ul>
                 </div>
             </div>

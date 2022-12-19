@@ -102,6 +102,7 @@ button {
 ul, li {
   list-style-type: '\1F47E';
   list-style-position: inside;
+  padding: 0;
 }
 
 li span {

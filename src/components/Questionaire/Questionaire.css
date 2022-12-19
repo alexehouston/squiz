@@ -4,16 +4,20 @@
     background-position: center;
     background-size: contain;
     position: fixed;
-    width: 65vmin;
-    height: 45vmin;
-    top: 40%;
+    width: 55vmin;
+    height: 40vmin;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -40%);
+    transform: translate(-50%, -50%);
 }
 
 .questionaire {
-    margin-top: 10vmin;
-    width: 55vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 .question, .choices {
@@ -21,13 +25,15 @@
 }
 
 .question {
-    font-size: 3vmin;
-    margin-left: 5vmin;
+    font-size: 2.5vmin;
+    width: 40vmin;
+    margin-right: 4vmin;
 }
 
 .choices {
-    font-size: 2vmin;
-    /* margin-right: 2vmin; */
+    font-size: 1.8vmin;
+    width: 40vmin;
+    margin: 3vmin 5vmin 0 0;
 }
 
 .octocat {
@@ -35,28 +41,11 @@
     bottom: 10%;
     left: 20%;
     width: 15vmin;
+    animation: slide-right;
+    animation-duration: 2s;
 }
 
-.monster {
-    position: fixed;
-    bottom: 17%;
-    right: 25%;
-    width: 12vmin;
-}
-
-.monster:nth-child(2) {
-    bottom: 12%;
-    right: 32%;
-    width: 7vmin;
-}
-
-.monster:nth-child(3) {
-    bottom: 12%;
-    width: 7vmin;
-    right: 20%;
-}
-
-.lives {
+#lives {
     display: flex;
     position: fixed;
     top: 14%;
@@ -67,4 +56,9 @@
 
 .heart {
     width: 5vmin;
+}
+
+@keyframes slide-right {
+    0% { left: -10% }
+    100% { left: 20%; }
 }

@@ -1,0 +1,39 @@
+.monster {
+    position: fixed;
+    bottom: 17%;
+    right: 25%;
+    width: 12vmin;
+    animation: slide-left-1;
+    animation-duration: 2s;
+}
+
+.monster:nth-child(2) {
+    bottom: 12%;
+    right: 32%;
+    width: 7vmin;
+    animation: slide-left-2;
+    animation-duration: 2s;
+}
+
+.monster:nth-child(3) {
+    bottom: 12%;
+    width: 7vmin;
+    right: 20%;
+    animation: slide-left-3;
+    animation-duration: 2s;
+}
+
+@keyframes slide-left-1 {
+    0% { right: -10% }
+    100% { right: 25%; }
+}
+
+@keyframes slide-left-2 {
+    0% { right: -10% }
+    100% { right: 32%; }
+}
+
+@keyframes slide-left-3 {
+    0% { right: -10% }
+    100% { right: 20%; }
+}

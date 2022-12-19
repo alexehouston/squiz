@@ -5,7 +5,7 @@ import Logo from '../../components/Logo/Logo';
 import * as questionsApi from '../../utilities/question-api';
 import "./QuizPage.css";
 
-export default function QuizPage({ questions, setQuestions }) {
+export default function QuizPage({ questions, setQuestions, user }) {
     const [quiz, setQuiz] = useState([]);
     const [currentIdx, setCurrentIdx] = useState(0);
     const [score, setScore] = useState(0);
@@ -39,6 +39,7 @@ export default function QuizPage({ questions, setQuestions }) {
             setScore={setScore}
             chances={chances}
             setChances={setChances}
+            user={user}
          />
     )
 
