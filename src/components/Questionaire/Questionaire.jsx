@@ -1,8 +1,10 @@
 import './Questionaire.css'
+import axios from 'axios';
 
 export default function QuizCard({ q, currentIdx, setCurrentIdx, score, setScore, chances, setChances }) {
 
     function handleAnswer(evt) {
+        evt.preventDefault();
         let userSelection = evt.target.value;
       
         if (userSelection === q.correct_answer) {
@@ -10,23 +12,24 @@ export default function QuizCard({ q, currentIdx, setCurrentIdx, score, setScore
             setCurrentIdx(currentIdx+1);
         } else {
             setChances(chances - 1);
-            if (chances < 1) {
-                setCurrentIdx(20);
-            }
             setCurrentIdx(currentIdx+1);
+        }
+        if (chances < 1) {
+            setCurrentIdx(20);
+            axios.post('/api/quiz', { score: {score} })
         }
     }
     
     return (
         <>
-            <img className="octocat" src="/assets/octocat.gif" />
-            <img className="monster" src="/assets/monster.gif" />
-            <img className="monster" src="/assets/monster.gif" />
-            <img className="monster" src="/assets/monster.gif" />
+            <img className="octocat" src="/assets/octocat.gif" alt="" />
+            <img className="monster" src="/assets/monster.gif" alt="" />
+            <img className="monster" src="/assets/monster.gif" alt="" />
+            <img className="monster" src="/assets/monster.gif" alt="" />
             <div className="hearts">
-                <img className="heart" src="/assets/heart.gif" />
-                <img className="heart" src="/assets/heart.gif" />
-                <img className="heart" src="/assets/heart.gif" />
+                <img className="heart" src="/assets/heart.gif" alt="" />
+                <img className="heart" src="/assets/heart.gif" alt="" />
+                <img className="heart" src="/assets/heart.gif" alt="" />
             </div>
             <div className="questionaire-container">
                 <div className="questionaire">

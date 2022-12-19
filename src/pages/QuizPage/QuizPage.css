@@ -76,3 +76,14 @@
     left: 4%;
     font-size: 3vmin;
   }
+
+  .game-over {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .game-over span {
+    font-size: 3vmin;
+  }

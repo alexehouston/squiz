@@ -6,10 +6,6 @@ const scoreSchema = new Schema({
 });
 
 const quizSchema = new Schema({
-    lives: {
-        type: Number,
-        min: 3
-    },
     user: [{
         type: Schema.Types.ObjectId,
         ref: 'User'

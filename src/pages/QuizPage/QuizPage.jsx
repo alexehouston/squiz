@@ -78,11 +78,11 @@ export default function QuizPage({ questions, setQuestions }) {
                 {mappedQuestions[currentIdx]}
             </div> 
             </>
-            : (<>
+            : (<div className="game-over">
                 <span>Game Over</span><br />
                 <span>You scored {score} points!</span><br />
-                <Link to="/"><span>Start Over</span></Link>
-            </>)
+                <Link to="/"><div className="pixel"><p>Start Over</p></div></Link>
+            </div>)
 
             }
         </div>
