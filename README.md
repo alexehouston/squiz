@@ -6,7 +6,7 @@
 
 #
 
-### [CLICK TO DEMO]()
+### [CLICK TO DEMO](https://squiz.herokuapp.com/)
 
 ##### Created by Alex E. Houston
 
@@ -62,7 +62,7 @@ Squiz is a full MERN-stack single-page web application & quiz game created with 
 
 <details>
   <summary>Deployed Link</summary>
-  <a href="">Squiz</a>
+  <a href="https://squiz.herokuapp.com/">Squiz</a>
 </details>
 
 ## :fast_forward: Next Steps
