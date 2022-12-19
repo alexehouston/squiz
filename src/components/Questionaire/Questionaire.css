@@ -56,11 +56,11 @@
     right: 20%;
 }
 
-.hearts {
+.lives {
     display: flex;
     position: fixed;
-    top: 15%;
-    right: 15%;
+    top: 14%;
+    right: 13%;
     width: 10vmin;
     column-gap: 3vmin;
 }

@@ -26,10 +26,23 @@ export default function QuizCard({ q, currentIdx, setCurrentIdx, score, setScore
             <img className="monster" src="/assets/monster.gif" alt="" />
             <img className="monster" src="/assets/monster.gif" alt="" />
             <img className="monster" src="/assets/monster.gif" alt="" />
-            <div className="hearts">
-                <img className="heart" src="/assets/heart.gif" alt="" />
-                <img className="heart" src="/assets/heart.gif" alt="" />
-                <img className="heart" src="/assets/heart.gif" alt="" />
+            <div className="lives">
+                {chances === 3 ? (
+                    <>
+                        <img className="heart" src="/assets/heart.gif" alt="" />
+                        <img className="heart" src="/assets/heart.gif" alt="" />
+                        <img className="heart" src="/assets/heart.gif" alt="" />
+                    </>
+                ) : chances === 2 ? (
+                    <>
+                        <img className="heart" src="/assets/heart.gif" alt="" />
+                        <img className="heart" src="/assets/heart.gif" alt="" />
+                    </>
+                ) : (
+                    <>
+                        <img className="heart" src="/assets/heart.gif" alt="" />
+                    </>
+                )}
             </div>
             <div className="questionaire-container">
                 <div className="questionaire">

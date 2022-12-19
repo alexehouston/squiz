@@ -7,10 +7,10 @@ nav {
 .welcome {
     font-family: 'VT323', monospace;
     text-transform: uppercase;
-    font-size: 3.5vmin;
+    font-size: 2.5vmin;
     position: fixed;
-    top: 3%;
-    left: 2.5%;
+    top: 4%;
+    left: 4%;
 }
 
 #logout {

@@ -69,14 +69,11 @@ export default function QuizPage({ questions, setQuestions }) {
             <Logo />
             { currentIdx < 20 ? 
             <>
-            <div className="game-text">
-                <span>Question {currentIdx + 1} / {mappedQuestions.length}</span><br />
-                <span>Lives: {chances} / 3</span><br />
-                <span>Score: {score}</span>
-            </div>
-            <div className="questionaire">
-                {mappedQuestions[currentIdx]}
-            </div> 
+                <span className="question-counter">Question {currentIdx + 1} / {mappedQuestions.length}</span><br />
+                <span className="score-tracker">Score: {score}</span>
+                <div className="questionaire">
+                    {mappedQuestions[currentIdx]}
+                </div> 
             </>
             : (<div className="game-over">
                 <span>Game Over</span><br />
