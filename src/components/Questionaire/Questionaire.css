@@ -43,7 +43,9 @@
     width: 15vmin;
     animation: slide-right;
     animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
+  
 
 #lives {
     display: flex;

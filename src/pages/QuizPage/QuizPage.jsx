@@ -52,6 +52,7 @@ export default function QuizPage({ questions, setQuestions, user }) {
                 <span className="score-tracker">Score: {score}</span>
                 <div className="questionaire">
                     {mappedQuestions[currentIdx]}
+                    <img className="octocat" src="/assets/octocat.gif" alt="" />
                 </div> 
             </>
             : (<div className="game-over">

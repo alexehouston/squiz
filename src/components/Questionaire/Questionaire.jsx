@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import Enemy from '../../components/Enemy/Enemy';
 import * as quizApi from '../../utilities/quiz-api';
 import './Questionaire.css'
@@ -30,7 +30,6 @@ export default function Questionaire({ q, currentIdx, setCurrentIdx, score, setS
     
     return (
         <>
-            <img className="octocat" src="/assets/octocat.gif" alt="" />
             <Enemy />
             <div id="lives" className="animate__bounceIn">
                 {chances === 3 ? (
