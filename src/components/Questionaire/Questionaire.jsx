@@ -7,15 +7,17 @@ export default function Questionaire({ q, currentIdx, setCurrentIdx, score, setS
 
     function handleAnswer(evt) {
         evt.preventDefault();
-        let userSelection = evt.target.value;
-        
-        if (userSelection === q.correct_answer) {
+        let userSelection = evt.target.dataset.value;
+        console.log(userSelection);
+
+        if (userSelection === 'true') {
             setScore(score + 10);
-            setCurrentIdx(currentIdx+1);
+            setCurrentIdx(currentIdx + 1);
         } else {
             setChances(chances - 1);
-            setCurrentIdx(currentIdx+1);
+            setCurrentIdx(currentIdx + 1);
         }
+    
         if (chances < 1) {
             saveQuiz();
             setCurrentIdx(20);
@@ -23,9 +25,10 @@ export default function Questionaire({ q, currentIdx, setCurrentIdx, score, setS
     }
 
     async function saveQuiz() {
-        const data = await quizApi.saveQuiz({ user: {user}, score: {score} });
+        const data = await quizApi.saveQuiz({ user, score });
+        console.log(user, score);
         console.log(data);
-      }
+    }
     
     return (
         <>
@@ -49,16 +52,25 @@ export default function Questionaire({ q, currentIdx, setCurrentIdx, score, setS
                 )}
             </div>
             <div className="questionaire-container">
+                <span className="tag">{q.tag} / {q.difficulty}</span>
                 <div className="questionaire">
                     <span className="question">{q.question}</span>
                     <ul className="choices">
-                        <li onClick={handleAnswer} value="answer_a"><span>{q.choices.answer_a}</span></li>
-                        <li onClick={handleAnswer} value="answer_b"><span>{q.choices.answer_b}</span></li>
+                        <li onClick={handleAnswer} data-value={q.answer.answer_a_correct}>
+                            &nbsp;{q.choices.answer_a}
+                        </li>
+                        <li onClick={handleAnswer} data-value={q.answer.answer_b_correct}>
+                            &nbsp;{q.choices.answer_b}
+                        </li>
                         {q.choices.answer_c !== null ? (
-                            <li onClick={handleAnswer} value="answer_c"><span>{q.choices.answer_c}</span></li>
+                            <li onClick={handleAnswer} data-value={q.answer.answer_c_correct}>
+                                &nbsp;{q.choices.answer_c}
+                            </li>
                         ) : ''}
                         {q.choices.answer_d !== null ? (
-                            <li onClick={handleAnswer} value="answer_d"><span>{q.choices.answer_d}</span></li>
+                            <li onClick={handleAnswer} data-value={q.answer.answer_d_correct}>
+                                &nbsp;{q.choices.answer_d}
+                            </li>
                         ) : ''}
                     </ul>
                 </div>

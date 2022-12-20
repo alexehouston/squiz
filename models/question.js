@@ -5,7 +5,7 @@ const questionSchema = new Schema({
     apiId: { type: Number, unique: true },
     question: String,
     choices: {},
-    answer: String,
+    answer: {},
     tag: String,
     category: String,
     difficulty: String

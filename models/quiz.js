@@ -6,11 +6,11 @@ const scoreSchema = new Schema({
 });
 
 const quizSchema = new Schema({
-    user: [{
+    user: {
         type: Schema.Types.ObjectId,
         ref: 'User'
-    }],
-    score: [scoreSchema]
+    },
+    score: scoreSchema
 });
 
 module.exports = mongoose.model('Quiz', quizSchema);

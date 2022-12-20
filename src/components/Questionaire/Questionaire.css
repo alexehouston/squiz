@@ -1,11 +1,11 @@
 .questionaire-container {
-    background-image: url('../../../public/assets/window.jpeg');
+    background-image: url('../../../public/assets/window.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     position: fixed;
-    width: 55vmin;
-    height: 40vmin;
+    width: 50vmin;
+    height: 35vmin;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -20,20 +20,27 @@
     height: 100%;
 }
 
-.question, .choices {
+.question, .choices, .tag, .difficulty {
     color: black;
+}
+
+.tag, .difficulty {
+    font-size: 1.5vmin;
+    position: fixed;
+    top: 6%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .question {
     font-size: 2.5vmin;
     width: 40vmin;
-    margin-right: 4vmin;
 }
 
 .choices {
     font-size: 1.8vmin;
     width: 40vmin;
-    margin: 3vmin 5vmin 0 0;
+    margin-top: 4vmin;
 }
 
 .octocat {
