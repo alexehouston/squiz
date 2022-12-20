@@ -1,23 +1,30 @@
+import { useEffect, useRef } from 'react';
 import Enemy from '../../components/Enemy/Enemy';
+import * as quizApi from '../../utilities/quiz-api';
 import './Questionaire.css'
-import axios from 'axios';
 
-export default function QuizCard({ q, currentIdx, setCurrentIdx, score, setScore, chances, setChances, user }) {
+export default function Questionaire({ q, currentIdx, setCurrentIdx, score, setScore, chances, setChances, user, quiz, setQuiz }) {
+
+    useEffect(() => {
+        async function saveQuiz() {
+            const response = await quizApi.saveQuizData(user, score);
+          }
+        if (chances < 1) {
+          saveQuiz();
+          setCurrentIdx(20);
+        }
+      }, [chances]);
 
     function handleAnswer(evt) {
         evt.preventDefault();
         let userSelection = evt.target.value;
-      
+        
         if (userSelection === q.correct_answer) {
             setScore(score + 10);
             setCurrentIdx(currentIdx+1);
         } else {
             setChances(chances - 1);
             setCurrentIdx(currentIdx+1);
-        }
-        if (chances < 1) {
-            axios.post('/api/quiz', { user: {user}, score: {score} })
-            setCurrentIdx(20);
         }
     }
     

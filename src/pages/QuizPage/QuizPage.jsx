@@ -11,7 +11,6 @@ export default function QuizPage({ questions, setQuestions, user }) {
     const [score, setScore] = useState(0);
     const [chances, setChances] = useState(3);
 
-
     useEffect(() => {
         async function randomQuestions() {
             const response = await questionsApi.getQuestions();
@@ -40,30 +39,9 @@ export default function QuizPage({ questions, setQuestions, user }) {
             chances={chances}
             setChances={setChances}
             user={user}
+            setQuiz={setQuiz}
          />
     )
-
-    // const handleAnswer = (correct) => {
-	// 	if (correct) {
-	// 		setScore(score + 10);
-	// 	}
-
-	// 	const nextQ = currentIdx + 1;
-	// 	if (nextQ < mappedQuestions.length) {
-	// 		setCurrentQ(nextQ);
-	// 	} else {
-	// 		setShowScore(true);
-	// 	}
-	// };
-
-    // const handleAnswer = (answer) => {
-    //     if (!showAnswers) {
-    //       if (answer === mappedQuestions[currentIdx].correct_answer) {
-    //         setScore(score+10);
-    //       }
-    //     }
-    //     setShowAnswers(true);
-    // }
 
     return (
         <div className="quiz">

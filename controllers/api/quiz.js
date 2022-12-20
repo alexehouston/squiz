@@ -5,6 +5,6 @@ module.exports = {
 };
 
 async function saveQuizData(req, res) {
-    const quizData = await req.body;
-    res.json(quizData);
+    const questions = await Quiz.create({});
+    res.json(questions);
 }

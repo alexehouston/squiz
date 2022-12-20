@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Leaderboard from '../../components/Leaderboard/Leaderboard';
 import Title from '../../components/Title/Title';
 import * as questionsApi from '../../utilities/question-api';
