@@ -5,6 +5,11 @@ module.exports = {
 };
 
 async function saveQuizData(req, res) {
-    const questions = await Quiz.create({});
-    res.json(questions);
+    const { user, score } = req.body;
+    const quiz = new Quiz({ user, score });
+    try {
+      await quiz.save();
+    } catch (err) {
+      res.status(500).send(err);
+    }
 }

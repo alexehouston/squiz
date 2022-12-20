@@ -5,16 +5,6 @@ import './Questionaire.css'
 
 export default function Questionaire({ q, currentIdx, setCurrentIdx, score, setScore, chances, setChances, user, quiz, setQuiz }) {
 
-    useEffect(() => {
-        async function saveQuiz() {
-            const response = await quizApi.saveQuizData(user, score);
-          }
-        if (chances < 1) {
-          saveQuiz();
-          setCurrentIdx(20);
-        }
-      }, [chances]);
-
     function handleAnswer(evt) {
         evt.preventDefault();
         let userSelection = evt.target.value;
@@ -26,7 +16,16 @@ export default function Questionaire({ q, currentIdx, setCurrentIdx, score, setS
             setChances(chances - 1);
             setCurrentIdx(currentIdx+1);
         }
+        if (chances < 1) {
+            saveQuiz();
+            setCurrentIdx(20);
+        }
     }
+
+    async function saveQuiz() {
+        const data = await quizApi.saveQuiz({ user: {user}, score: {score} });
+        console.log(data);
+      }
     
     return (
         <>

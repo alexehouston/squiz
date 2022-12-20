@@ -5,6 +5,6 @@ export async function getQuizData() {
     return sendRequest(BASE_URL);
 }
 
-export async function saveQuizData() {
+export async function saveQuiz() {
     return sendRequest(BASE_URL, 'POST');
 }
