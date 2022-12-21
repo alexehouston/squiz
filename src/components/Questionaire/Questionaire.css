@@ -42,13 +42,15 @@
 .question {
     font-size: 2vmin;
     width: 40vmin;
-    margin-top: 2vmin;
+    margin-top: 4vmin;
+    text-align: center;
 }
 
 .choices {
     font-size: 1.6vmin;
-    width: 40vmin;
-    margin-top: 2vmin;
+    width: 35vmin;
+    margin: 3vmin 0;
+    /* text-align: left; */
 }
 
 .octocat {

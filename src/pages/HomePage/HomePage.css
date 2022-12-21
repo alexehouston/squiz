@@ -1,0 +1,25 @@
+.categories {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    font-size: 3vmin;
+    padding: 5px;
+}
+
+select, option {
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'VT323', monospace;
+}
+
+select {
+    width: 12vmin;
+}

@@ -3,6 +3,9 @@ import * as quizApi from '../../utilities/quiz-api';
 import './Questionaire.css'
 
 export default function Questionaire({ q, currentIdx, setCurrentIdx, score, setScore, chances, setChances, user }) {
+    const correctSound = document.getElementById('correctSound');
+    const incorrectSound = document.getElementById('incorrectSound');
+
 
     async function saveQuiz() {
         const data = {user: {
@@ -24,7 +27,7 @@ export default function Questionaire({ q, currentIdx, setCurrentIdx, score, setS
         } catch (error) {
           console.error(error);
         }
-      }
+    }
     
     function handleAnswer(evt) {
         evt.preventDefault();
@@ -33,19 +36,24 @@ export default function Questionaire({ q, currentIdx, setCurrentIdx, score, setS
         if (userSelection === 'true') {
             setScore(score + 10);
             setCurrentIdx(currentIdx + 1);
+            correctSound.play();
         } else {
             setChances(chances - 1);
             setCurrentIdx(currentIdx + 1);
+            incorrectSound.play();
         }
         if (chances < 1) {
             saveQuiz();
             setCurrentIdx(20);
+            incorrectSound.play();
         }
     }
     
     return (
         <>
             <Enemy />
+            <audio id="correctSound" src="assets/music/correct.wav" type="audio/wav" />
+            <audio id="incorrectSound" src="/assets/music/incorrect.wav" type="audio/wav" />
             <div id="lives" className="animate__bounceIn">
                 {chances === 3 ? (
                     <>

@@ -5,28 +5,32 @@ import Logo from '../../components/Logo/Logo';
 import * as questionsApi from '../../utilities/question-api';
 import "./QuizPage.css";
 
-export default function QuizPage({ questions, setQuestions, user }) {
+export default function QuizPage({ questions, setQuestions, user, selectedCategory }) {
     const [quiz, setQuiz] = useState([]);
     const [currentIdx, setCurrentIdx] = useState(0);
     const [score, setScore] = useState(0);
     const [chances, setChances] = useState(3);
 
     useEffect(() => {
-        async function randomQuestions() {
-            const response = await questionsApi.getQuestions();
-            setQuestions(response);
-            let nums = [];
-            while (nums.length !== 20) {
-                let ranNum = Math.floor(Math.random() * questions.length);
-                if (!nums.includes(ranNum)) nums.push(ranNum);
+        async function randomQuestions(selectedCategory) {
+          const response = await questionsApi.getQuestions({});
+          let filteredQuestions = response;
+          if (selectedCategory) {
+            filteredQuestions = response.filter(question => question.category === selectedCategory);
+          }
+          let nums = [];
+          while (nums.length !== 20) {
+            let ranNum = Math.floor(Math.random() * filteredQuestions.length);
+            if (!nums.includes(ranNum)) {
+              nums.push(ranNum);
             }
-            let quizQuestions = questions.filter(function(q, idx) {
-                if (nums.includes(idx)) return q;
-            })
-            setQuiz(quizQuestions);
-        };
-        randomQuestions();
-    }, [])
+          }
+          let quizQuestions = [];
+          nums.forEach(num => quizQuestions.push(filteredQuestions[num]));
+          setQuiz(quizQuestions);
+        }
+        randomQuestions(selectedCategory);
+    }, [selectedCategory]);
 
     let mappedQuestions = quiz.map((q) => 
         <Questionaire 
