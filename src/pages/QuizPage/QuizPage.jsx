@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from 'react-router-dom';
+import HomePage from '../../pages/HomePage/HomePage';
 import Questionaire from '../../components/Questionaire/Questionaire';
 import Logo from '../../components/Logo/Logo';
 import * as questionsApi from '../../utilities/question-api';
@@ -10,6 +10,7 @@ export default function QuizPage({ questions, setQuestions, user, selectedCatego
     const [currentIdx, setCurrentIdx] = useState(0);
     const [score, setScore] = useState(0);
     const [chances, setChances] = useState(3);
+    const [showHomePage, setShowHomePage] = useState(false);
 
     useEffect(() => {
         async function randomQuestions(selectedCategory) {
@@ -19,7 +20,7 @@ export default function QuizPage({ questions, setQuestions, user, selectedCatego
             filteredQuestions = response.filter(question => question.category === selectedCategory);
           }
           let nums = [];
-          while (nums.length !== 20) {
+          while (nums.length !== 25) {
             let ranNum = Math.floor(Math.random() * filteredQuestions.length);
             if (!nums.includes(ranNum)) {
               nums.push(ranNum);
@@ -31,6 +32,10 @@ export default function QuizPage({ questions, setQuestions, user, selectedCatego
         }
         randomQuestions(selectedCategory);
     }, [selectedCategory]);
+
+    const handleHomeClick = () => {
+        setShowHomePage(true);
+    };
 
     let mappedQuestions = quiz.map((q) => 
         <Questionaire 
@@ -48,24 +53,28 @@ export default function QuizPage({ questions, setQuestions, user, selectedCatego
     )
 
     return (
-        <div className="quiz">
-            <Logo />
-            { currentIdx < 20 ? 
-            <>
-                <span className="question-counter">Question {currentIdx + 1} / {mappedQuestions.length}</span><br />
-                <span className="score-tracker">Score: {score}</span>
-                <div className="questionaire">
-                    {mappedQuestions[currentIdx]}
-                    <img className="octocat" src="/assets/octocat.gif" alt="" />
-                </div> 
-            </>
-            : (<div className="game-over">
-                <span>Game Over</span><br />
-                <span>You scored {score} points!</span><br />
-                <Link to="/"><div className="pixel"><p>Start Over</p></div></Link>
-            </div>)
+        <>
+            {showHomePage ? <HomePage user={user} questions={questions} setQuestions={setQuestions} /> :
+                <div className="quiz">
+                    <Logo />
+                    { currentIdx < 20 ? 
+                    <>
+                        <span className="question-counter">Question {currentIdx + 1} / {mappedQuestions.length}</span><br />
+                        <span className="score-tracker">Score: {score}</span>
+                        <div className="questionaire">
+                            {mappedQuestions[currentIdx]}
+                            <img className="octocat" src="/assets/octocat.gif" alt="" />
+                        </div> 
+                    </>
+                    : (<div className="game-over">
+                        <span>Game Over</span><br />
+                        <span>You scored {score} points!</span><br />
+                        <div className="pixel" onClick={handleHomeClick}><p>Start Over</p></div>
+                    </div>)
 
+                    }
+                </div>
             }
-        </div>
+        </>
     );
 }

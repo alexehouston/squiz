@@ -18,6 +18,7 @@ export default function Leaderboard() {
 
     return (
         <div className="leaderboard">
+            <span className="leaderboard-title">High Scores</span>
             <div className="coins">
                 <img id="coin" src="/assets/coin.gif" alt="" />
                 <img id="coin" src="/assets/coin.gif" alt="" />

@@ -11,8 +11,21 @@
     transform: translate(-50%, -55%);
 }
 
+.leaderboard-title {
+    color: black;
+    position: fixed;
+    top: 6%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    font-size: 2vmin;
+    letter-spacing: 1vmin;
+}
+
 .players {
-    margin: -27vmin 0 0 14vmin;
+    position: fixed;
+    top: 53.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .coins {

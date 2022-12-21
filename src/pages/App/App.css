@@ -117,3 +117,11 @@ li span {
   position: relative;
   left: 10px;
 }
+
+label, select, option {
+  z-index: 0;
+}
+
+.leaderboard {
+  z-index: 5;
+}
