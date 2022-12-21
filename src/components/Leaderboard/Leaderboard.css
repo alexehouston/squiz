@@ -1,34 +1,33 @@
 .leaderboard {
+    background-image: url('../../../public/assets/window.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
     position: fixed;
     width: 50vmin;
-    height: 30vmin;
-    top: 50%;
+    height: 35vmin;
+    top: 55%;
     left: 50%;
-    transform: translate(-50%, -40%);
+    transform: translate(-50%, -55%);
 }
 
-#window {
-    width: 50vmin;
+.players {
+    margin: -27vmin 0 0 1.5vmin;
 }
 
 .coins {
     display: flex;
     flex-direction: column;
-    margin: -29vmin 0 0 5vmin;
+    margin: 6vmin 0 0 4vmin;
 }
 
 #coin {
     width: 5vmin;
 }
 
-.players {
-    display: flex;
-    flex-direction: column;
-    margin: -24.8vmin 0;
-}
-
 .player {
     font-size: 4vmin;
     color: black;
     line-height: 5vmin;
+    list-style-type: none;
 }

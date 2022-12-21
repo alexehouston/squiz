@@ -26,7 +26,7 @@ export default function App() {
 
   return (
     <main className="App">
-      <audio ref={audioRef} />
+      <audio ref={audioRef} loop />
       { user ?
           <>
             <NavBar user={user} setUser={setUser} />

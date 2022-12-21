@@ -1,14 +1,34 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
 import Enemy from '../../components/Enemy/Enemy';
 import * as quizApi from '../../utilities/quiz-api';
 import './Questionaire.css'
 
-export default function Questionaire({ q, currentIdx, setCurrentIdx, score, setScore, chances, setChances, user, quiz, setQuiz }) {
+export default function Questionaire({ q, currentIdx, setCurrentIdx, score, setScore, chances, setChances, user }) {
 
+    async function saveQuiz() {
+        const data = {user: {
+            userID: user._id,
+            name: user.name,
+            createdAt: user.createdAt,
+            email: user.email
+          },
+          score: score
+        };
+      
+        try {
+          const response = await quizApi.saveQuiz(data);
+          if (response.status === 201) {
+            console.log('Quiz saved successfully!');
+          } else {
+            console.error(`Error saving quiz: ${response.status}`);
+          }
+        } catch (error) {
+          console.error(error);
+        }
+      }
+    
     function handleAnswer(evt) {
         evt.preventDefault();
         let userSelection = evt.target.dataset.value;
-        console.log(userSelection);
 
         if (userSelection === 'true') {
             setScore(score + 10);
@@ -17,17 +37,10 @@ export default function Questionaire({ q, currentIdx, setCurrentIdx, score, setS
             setChances(chances - 1);
             setCurrentIdx(currentIdx + 1);
         }
-    
         if (chances < 1) {
             saveQuiz();
             setCurrentIdx(20);
         }
-    }
-
-    async function saveQuiz() {
-        const data = await quizApi.saveQuiz({ user, score });
-        console.log(user, score);
-        console.log(data);
     }
     
     return (

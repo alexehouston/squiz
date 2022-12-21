@@ -1,16 +1,14 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const scoreSchema = new Schema({
-    score: Number
-});
-
 const quizSchema = new Schema({
     user: {
-        type: Schema.Types.ObjectId,
-        ref: 'User'
+      userID: String,
+      name: String,
+      createdAt: Date,
+      email: String
     },
-    score: scoreSchema
+    score: Number
 });
 
 module.exports = mongoose.model('Quiz', quizSchema);
