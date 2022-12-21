@@ -1,0 +1,10 @@
+footer {
+    font-family: 'VT323', monospace;
+    position: fixed;
+    width: 100vw;
+    bottom: 1%;
+    text-align: center;
+    text-transform: uppercase;
+    color: grey;
+    letter-spacing: 2px;
+}

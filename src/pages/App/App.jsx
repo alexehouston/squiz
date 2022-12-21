@@ -5,6 +5,7 @@ import AuthPage from '../AuthPage/AuthPage';
 import HomePage from '../HomePage/HomePage';
 import QuizPage from '../QuizPage/QuizPage';
 import NavBar from '../../components/NavBar/NavBar';
+import Footer from '../../components/Footer/Footer';
 import 'animate.css';
 import './App.css';
 
@@ -38,6 +39,7 @@ export default function App() {
           :
           <AuthPage setUser={setUser} />
       }
+      <Footer />
     </main>
   );
 }
