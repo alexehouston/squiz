@@ -13,14 +13,17 @@ export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const audioRef = useRef(null);
 
-    useEffect(() => {
-        if (currentPage === 'home') {
-        audioRef.current.src = '/assets/music/home.wav';
-        } else if (currentPage === 'quiz') {
-        audioRef.current.src = '/assets/music/gameplay.wav';
-        }
+  useEffect(() => {
+      if (currentPage === 'home') {
+      audioRef.current.src = '/assets/music/home.wav';
+      } else if (currentPage === 'quiz') {
+      audioRef.current.src = '/assets/music/gameplay.wav';
+      }
+      audioRef.current.addEventListener('canplaythrough', () => {
         audioRef.current.play();
-    }, [currentPage]);
+      });
+  }, [currentPage]);
+  
 
   return (
     <main className="App">
