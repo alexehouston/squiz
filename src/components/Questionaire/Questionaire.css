@@ -62,12 +62,16 @@
 }
 
 #lives {
-    display: flex;
     position: fixed;
     top: 14%;
-    right: 15%;
-    width: 10vmin;
+    right: 8%;
+}
+
+.hearts {
+    display: flex;
     column-gap: 3vmin;
+    justify-content: center;
+    align-items: center;
 }
 
 .heart {
@@ -112,8 +116,9 @@
     }
 
     #lives { 
+        position: fixed;
         top: 19%;
-        right: 50%;
+        left: 50%;
         transform: translate(-50%, -50%);
     }
 

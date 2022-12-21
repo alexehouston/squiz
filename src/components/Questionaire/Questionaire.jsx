@@ -54,22 +54,22 @@ export default function Questionaire({ q, currentIdx, setCurrentIdx, score, setS
             <Enemy />
             <audio id="correctSound" src="assets/music/correct.wav" type="audio/wav" />
             <audio id="incorrectSound" src="/assets/music/incorrect.wav" type="audio/wav" />
-            <div id="lives" className="animate__bounceIn">
+            <div id="lives">
                 {chances === 3 ? (
-                    <>
+                    <div className="hearts">
                         <img className="heart" src="/assets/heart.gif" alt="" />
                         <img className="heart" src="/assets/heart.gif" alt="" />
                         <img className="heart" src="/assets/heart.gif" alt="" />
-                    </>
+                    </div>
                 ) : chances === 2 ? (
-                    <>
+                    <div className="hearts">
                         <img className="heart" src="/assets/heart.gif" alt="" />
                         <img className="heart" src="/assets/heart.gif" alt="" />
-                    </>
+                    </div>
                 ) : (
-                    <>
+                    <div className="hearts">
                         <img className="heart" src="/assets/heart.gif" alt="" />
-                    </>
+                    </div>
                 )}
             </div>
             <div className="questionaire-container">
