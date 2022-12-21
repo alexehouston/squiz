@@ -19,11 +19,8 @@ export default function App() {
       } else if (currentPage === 'quiz') {
       audioRef.current.src = '/assets/music/gameplay.wav';
       }
-      audioRef.current.addEventListener('canplaythrough', () => {
-        audioRef.current.play();
-      });
+      audioRef.current.play();
   }, [currentPage]);
-  
 
   return (
     <main className="App">
@@ -34,7 +31,7 @@ export default function App() {
             <HomePage user={user} questions={questions} setQuestions={setQuestions} currentPage={currentPage} setCurrentPage={setCurrentPage} />
           </>
           :
-          <AuthPage setUser={setUser} />
+          <AuthPage setUser={setUser} currentPage={currentPage} setCurrentPage={setCurrentPage} />
       }
       <Footer />
     </main>

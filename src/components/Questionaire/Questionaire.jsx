@@ -6,6 +6,7 @@ export default function Questionaire({ q, currentIdx, setCurrentIdx, score, setS
     const correctSound = document.getElementById('correctSound');
     const incorrectSound = document.getElementById('incorrectSound');
 
+
     async function saveQuiz() {
         const data = {user: {
             userID: user._id,

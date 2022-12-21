@@ -5,7 +5,7 @@ import HomePage from '../../pages/HomePage/HomePage';
 import Title from '../../components/Title/Title';
 import './AuthPage.css';
 
-export default function AuthPage({ user, setUser }) {
+export default function AuthPage({ user, setUser, currentPage, setCurrentPage }) {
   const [showSignUp, setShowSignUp] = useState(false);
   
   return (
@@ -20,7 +20,10 @@ export default function AuthPage({ user, setUser }) {
         :
           <LoginForm setUser={setUser} />
         }
-        <button className="pixel" id="auth-button" onClick={() => setShowSignUp(!showSignUp)}>{showSignUp ? 'Log In' : 'Sign Up'}</button>
+        <button className="pixel" id="auth-button" onClick={() => {
+          setShowSignUp(!showSignUp);
+          setCurrentPage('home');
+        }}>{showSignUp ? 'Log In' : 'Sign Up'}</button>
       </>
     }
     </main>
