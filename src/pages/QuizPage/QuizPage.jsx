@@ -5,7 +5,7 @@ import Logo from '../../components/Logo/Logo';
 import * as questionsApi from '../../utilities/question-api';
 import "./QuizPage.css";
 
-export default function QuizPage({ questions, setQuestions, user, selectedCategory }) {
+export default function QuizPage({ questions, setQuestions, user, selectedCategory, setCurrentPage, currentPage }) {
     const [quiz, setQuiz] = useState([]);
     const [currentIdx, setCurrentIdx] = useState(0);
     const [score, setScore] = useState(0);
@@ -35,6 +35,7 @@ export default function QuizPage({ questions, setQuestions, user, selectedCatego
 
     const handleHomeClick = () => {
         setShowHomePage(true);
+        setCurrentPage('home');
     };
 
     let mappedQuestions = quiz.map((q) => 
@@ -69,7 +70,7 @@ export default function QuizPage({ questions, setQuestions, user, selectedCatego
                     : (<div className="game-over">
                         <span>Game Over</span><br />
                         <span>You scored {score} points!</span><br />
-                        <div className="pixel" onClick={handleHomeClick}><p>Start Over</p></div>
+                        <div className="pixel" onClick={() => handleHomeClick()}><p>Start Over</p></div>
                     </div>)
 
                     }

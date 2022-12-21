@@ -2,10 +2,11 @@ import { Link } from 'react-router-dom';
 import * as userService from '../../utilities/users-service';
 import './NavBar.css';
 
-export default function NavBar({ user, setUser }) {
+export default function NavBar({ user, setUser, currentPage, setCurrentPage }) {
   function handleLogOut() {
     userService.logOut();
     setUser(null);
+    setCurrentPage('home');
   }
 
   return (

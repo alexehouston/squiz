@@ -27,7 +27,7 @@ export default function App() {
       <audio ref={audioRef} autoPlay loop />
       { user ?
           <>
-            <NavBar user={user} setUser={setUser} />
+            <NavBar user={user} setUser={setUser} currentPage={currentPage} setCurrentPage={setCurrentPage} />
             <HomePage user={user} questions={questions} setQuestions={setQuestions} currentPage={currentPage} setCurrentPage={setCurrentPage} />
           </>
           :
