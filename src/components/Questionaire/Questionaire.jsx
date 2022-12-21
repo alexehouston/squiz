@@ -65,7 +65,8 @@ export default function Questionaire({ q, currentIdx, setCurrentIdx, score, setS
                 )}
             </div>
             <div className="questionaire-container">
-                <span className="tag">{q.tag} / {q.difficulty}</span>
+                <span className="tag">{q.tag}</span>
+                <span className="difficulty">Difficulty: {q.difficulty}</span>
                 <div className="questionaire">
                     <span className="question">{q.question}</span>
                     <ul className="choices">
