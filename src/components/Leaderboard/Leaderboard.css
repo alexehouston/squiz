@@ -12,7 +12,7 @@
 }
 
 .players {
-    margin: -27.5vmin 0 0 3vmin;
+    margin: -27vmin 0 0 14vmin;
 }
 
 .coins {
@@ -30,4 +30,5 @@
     color: black;
     line-height: 5.1vmin;
     list-style-type: none;
+    text-align: left;
 }
