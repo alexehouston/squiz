@@ -37,3 +37,37 @@
     0% { right: -10% }
     100% { right: 20%; }
 }
+
+@media only screen and (max-width: 500px) {
+
+    .monster {
+        width: 20vmin;
+        right: 18%;
+    }
+
+    .monster:nth-child(2) {
+        width: 10vmin;
+        right: 30%;
+    }
+
+    .monster:nth-child(3) {
+        width: 11vmin;
+        right: 10%;
+    }
+
+    @keyframes slide-left-1 {
+        0% { right: -20% }
+        100% { right: 18%; }
+    }
+    
+    @keyframes slide-left-2 {
+        0% { right: -20% }
+        100% { right: 30%; }
+    }
+    
+    @keyframes slide-left-3 {
+        0% { right: -20% }
+        100% { right: 10%; }
+    }
+
+}

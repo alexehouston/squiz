@@ -10,8 +10,6 @@ export default function HomePage({ user, questions, setQuestions, currentPage, s
     const [selectedCategory, setSelectedCategory] = useState('');
     const [showQuizPage, setShowQuizPage] = useState(false);
 
-    console.log(currentPage);
-
     const handleLeaderboard = evt => {
         setIsShown(current => !current);
     };

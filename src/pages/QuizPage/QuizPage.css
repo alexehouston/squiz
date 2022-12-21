@@ -27,14 +27,14 @@
 @media only screen and (max-width: 500px) {
 
   .question-counter {
-      top: 28%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 5vmin;
+    top: 26%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5vmin;
   }
 
   .score-tracker {
-    top: 32%;
+    top: 29%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 5vmin;
