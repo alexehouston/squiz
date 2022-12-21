@@ -50,13 +50,11 @@
     font-size: 1.6vmin;
     width: 35vmin;
     margin: 3vmin 0;
-    /* text-align: left; */
 }
 
 .octocat {
     position: fixed;
     bottom: 10%;
-    left: 20%;
     width: 15vmin;
     animation: slide-right;
     animation-duration: 2s;
@@ -67,7 +65,7 @@
     display: flex;
     position: fixed;
     top: 14%;
-    right: 13%;
+    right: 15%;
     width: 10vmin;
     column-gap: 3vmin;
 }
@@ -79,4 +77,56 @@
 @keyframes slide-right {
     0% { left: -10% }
     100% { left: 20%; }
+}
+
+@media only screen and (max-width: 500px) {
+     
+    .questionaire-container {
+        width: 90vmin;
+        height: 60vmin;
+    }
+
+    .tag, .difficulty {
+        font-size: 4vmin;
+    }
+
+    .tag {
+        left: 17%;
+    }
+    
+    .difficulty {
+        right: 1%;
+    }
+
+    .question, .choices {
+        margin: 2vmin 0;
+        width: 85%;
+    }
+
+    .question {
+        font-size: 4vmin;
+    }
+
+    .choices {
+        font-size: 3vmin;
+    }
+
+    #lives { 
+        top: 18%;
+        right: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .heart {
+        width: 8vmin;
+    }
+
+   .octocat {
+      width: 30vmin;
+   }
+
+   @keyframes slide-right {
+    0% { left: -10% }
+    100% { left: 10%; }
+    }
 }

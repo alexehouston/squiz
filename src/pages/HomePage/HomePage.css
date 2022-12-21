@@ -23,3 +23,14 @@ select, option {
 select {
     width: 12vmin;
 }
+
+@media only screen and (max-width: 500px) {
+
+    label {
+        font-size: 6vmin;
+    }
+    select {
+        width: 25vmin;
+        font-size: 4vmin;
+    }
+}

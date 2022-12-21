@@ -18,3 +18,12 @@ nav {
     top: 1%;
     right: 1%;
 }
+
+@media only screen and (max-width: 500px) {
+    
+    .welcome {
+        font-size: 4vmin;
+        top: 3.5%;
+        left: 8%;
+    }
+}

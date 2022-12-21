@@ -45,3 +45,31 @@
     list-style-type: none;
     text-align: left;
 }
+
+@media only screen and (max-width: 500px) {
+
+    .leaderboard {
+        width: 80vmin;
+        height: 50vmin;
+    }
+
+    .leaderboard-title {
+        font-size: 4vmin;
+        top: 7%;
+    }
+
+    .coins {
+        margin: 9vmin 0 0 14vmin;
+    }
+
+    #coin {
+        width: 7vmin;
+    }
+
+    .player {
+        font-size: 5vmin;
+        line-height: 7vmin;
+        margin: 0 0 0 47vmin;
+        width: 80vw;
+    }
+}

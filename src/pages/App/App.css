@@ -125,3 +125,11 @@ label, select, option {
 .leaderboard {
   z-index: 5;
 }
+
+/* @media only screen and (max-width: 500px) {
+
+  #myCanvas {
+
+  }
+
+} */

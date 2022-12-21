@@ -1,7 +1,7 @@
 .score-tracker {
   position: fixed;
   top: 15%;
-  left: 5.5%;
+  left: 6%;
   font-size: 3vmin;
 }
 
@@ -22,4 +22,30 @@
 
 .game-over span {
   font-size: 3vmin;
+}
+
+@media only screen and (max-width: 500px) {
+
+  .question-counter {
+      top: 28%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 5vmin;
+  }
+
+  .score-tracker {
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5vmin;
+  }
+
+  .game-over {
+    width: 100%;
+  }
+
+  .game-over span {
+    font-size: 6vmin;
+  }
+
 }
