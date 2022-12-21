@@ -1,9 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import AuthPage from '../AuthPage/AuthPage';
 import HomePage from '../HomePage/HomePage';
-import QuizPage from '../QuizPage/QuizPage';
 import NavBar from '../../components/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer';
 import 'animate.css';
@@ -12,18 +10,17 @@ import './App.css';
 export default function App() {
   const [user, setUser] = useState(getUser());
   const [questions, setQuestions] = useState([]);
-
+  const [currentPage, setCurrentPage] = useState('home');
   const audioRef = useRef(null);
-  const location = useLocation();
 
-  useEffect(() => {
-    if (location.pathname === '/') {
-      audioRef.current.src = '/assets/music/home.wav';
-    } else if (location.pathname === '/quiz') {
-      audioRef.current.src = '/assets/music/gameplay.wav';
-    }
-    audioRef.current.play();
-  }, [location]);
+    useEffect(() => {
+        if (currentPage === 'home') {
+        audioRef.current.src = '/assets/music/home.wav';
+        } else if (currentPage === 'quiz') {
+        audioRef.current.src = '/assets/music/gameplay.wav';
+        }
+        audioRef.current.play();
+    }, [currentPage]);
 
   return (
     <main className="App">
@@ -31,7 +28,7 @@ export default function App() {
       { user ?
           <>
             <NavBar user={user} setUser={setUser} />
-            <HomePage user={user} questions={questions} setQuestions={setQuestions} />
+            <HomePage user={user} questions={questions} setQuestions={setQuestions} currentPage={currentPage} setCurrentPage={setCurrentPage} />
           </>
           :
           <AuthPage setUser={setUser} />

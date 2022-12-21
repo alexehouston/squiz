@@ -1,10 +1,10 @@
-import { useState, useEffect, useHistory } from 'react';
+import { useState } from 'react';
 import Leaderboard from '../../components/Leaderboard/Leaderboard';
 import Title from '../../components/Title/Title';
 import QuizPage from '../../pages/QuizPage/QuizPage';
 import './HomePage.css';
 
-export default function HomePage({ user, questions, setQuestions }) {
+export default function HomePage({ user, questions, setQuestions, currentPage, setCurrentPage }) {
     const [isShown, setIsShown] = useState(false);
     const [backButton, setBackButton] = useState(false);
     const [selectedCategory, setSelectedCategory] = useState('');
@@ -16,6 +16,7 @@ export default function HomePage({ user, questions, setQuestions }) {
 
     const handlePlayClick = () => {
         setShowQuizPage(true);
+        setCurrentPage('quiz');
     };
 
     return (
