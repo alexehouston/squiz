@@ -125,15 +125,17 @@
 
     .question, .choices {
         margin: 2vmin 0;
-        width: 85%;
+        width: 80%;
     }
 
     .question {
         font-size: 4vmin;
+        margin-top: 5vmin;
     }
 
     .choices {
         font-size: 3vmin;
+        line-height: 2;
     }
 
     #lives { 
