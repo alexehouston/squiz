@@ -75,6 +75,7 @@ a:hover {
 }
 
 .pixel p {
+  color: white;
   display: inline-block;
   vertical-align: top;
   position: relative;

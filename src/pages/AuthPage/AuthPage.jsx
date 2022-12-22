@@ -23,7 +23,7 @@ export default function AuthPage({ user, setUser, currentPage, setCurrentPage })
         <div className="pixel" id="auth-button" onClick={() => {
           setShowSignUp(!showSignUp);
           setCurrentPage('home');
-        }}><p>{showSignUp ? 'Log In' : 'Sign Up'}</p></div>
+        }}>{showSignUp ? 'Log In' : 'Sign Up'}</div>
       </>
     }
     </main>
