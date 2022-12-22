@@ -123,6 +123,10 @@ span, label, select, option, ul, li, #auth-button {
   text-transform: uppercase;
 }
 
+input {
+  width: 90px;
+}
+
 .pixel {
   color: white;
   -webkit-text-fill-color: white;
