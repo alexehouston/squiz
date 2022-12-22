@@ -6,11 +6,9 @@
 
 ##### Created by <a href="https://alexehouston.github.io/portfolio/">Alex E. Houston</a>
 
-<br>
-
 [![GitHub Badge](https://img.shields.io/github/followers/alexehouston?label=Follow&style=social)](https://www.github.com/alexehouston/)
 
-<br/><br/>
+<br/>
 
 # :pencil: Description
 
@@ -67,8 +65,6 @@ Squiz is a full MERN-stack single-page web application & quiz game created with 
 ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
 ![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
 
-<br/>
-
 # :fast_forward: Next Steps
 
 Allow users to choose between Easy, Normal and Hard modes at the start of the game.
@@ -76,8 +72,6 @@ Allow users to choose between Easy, Normal and Hard modes at the start of the ga
 Allow users to choose their character at the start of the game.
 
 Allow users to choose their environments (backgrounds) at the start of the game.
-
-<br/>
 
 # Credits
 
@@ -92,5 +86,3 @@ Monster GIF by <a href="https://pixfinity.carrd.co/">Pixfinity</a>
 Parallax Background Images by <a href="https://edermuniz.carrd.co/">Eder Muniz</a>
 
 Music/Sound Effects by <a href="https://abstractionmusic.com/">Abstraction</a>
-
-</div>
