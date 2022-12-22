@@ -49,11 +49,11 @@ Squiz is a full MERN-stack single-page web application & quiz game created with 
 
 <br /><h4 align="center">Mobile-View</h4><br/>
 <p float="left">
-  <img src="public/img/mobile-home.gif" width="150" />
+  <img src="public/img/mobile-home.gif" width="200" />
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="public/img/mobile-gameplay.gif" width="150" />
+  <img src="public/img/mobile-gameplay.gif" width="200" />
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="public/img/mobile-leaderboard.gif" width="150" />
+  <img src="public/img/mobile-leaderboard.gif" width="200" />
 </p><br />
 
 # :computer: Technologies Used
