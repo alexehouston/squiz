@@ -30,6 +30,11 @@ nav {
     .welcome {
         font-size: 4vmin;
         top: 3.5%;
-        left: 8%;
+        left: 36%;
+    }
+
+    #back {
+        top: 1%;
+        right: 73%;
     }
 }
