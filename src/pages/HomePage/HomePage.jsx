@@ -43,7 +43,7 @@ export default function HomePage({ user, questions, setQuestions, currentPage, s
                     {isShown && <Leaderboard />}
                 </div>
                 <div className="categories">
-                    <label>Category:</label>
+                    <label>Category</label>
                     <select onChange={(evt) => { setSelectedCategory(evt.target.value) }}>
                         <option value="">All</option>
                         <option value="Code">Code</option>
@@ -52,8 +52,8 @@ export default function HomePage({ user, questions, setQuestions, currentPage, s
                         <option value="Linux">Linux</option>
                         <option value="Docker">Docker</option>
                         <option value="CMS">CMS</option>
-                    </select>
-                    <label>Character:</label>
+                    </select><br />
+                    <label>Character</label>
                     <select onChange={event => setCharacter(event.target.value)}>
                         <option value="octocat">Octocat</option>
                         <option value="kitty">Kitty</option>
