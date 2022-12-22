@@ -61,6 +61,27 @@
     animation-fill-mode: forwards;
 }
 
+.kitty {
+    position: fixed;
+    bottom: 8.5%;
+    left: 20%;
+    width: 17vmin;
+}
+
+.witch {
+    position: fixed;
+    bottom: 10%;
+    left: 18%;
+    width: 20vmin;
+}
+
+.skeleton {
+    position: fixed;
+    bottom: 11%;
+    width: 11vmin;
+    left: 22%;
+}
+
 #lives {
     position: fixed;
     top: 14%;

@@ -5,12 +5,14 @@ import Logo from '../../components/Logo/Logo';
 import * as questionsApi from '../../utilities/question-api';
 import "./QuizPage.css";
 
-export default function QuizPage({ questions, setQuestions, user, selectedCategory, setCurrentPage, currentPage }) {
+export default function QuizPage({ questions, setQuestions, user, selectedCategory, setCurrentPage, currentPage, character, setCharacter }) {
     const [quiz, setQuiz] = useState([]);
     const [currentIdx, setCurrentIdx] = useState(0);
     const [score, setScore] = useState(0);
     const [chances, setChances] = useState(3);
     const [showHomePage, setShowHomePage] = useState(false);
+
+    console.log(character);
 
     useEffect(() => {
         async function randomQuestions(selectedCategory) {
@@ -64,7 +66,15 @@ export default function QuizPage({ questions, setQuestions, user, selectedCatego
                         <span className="score-tracker">Score: {score}</span>
                         <div className="questionaire">
                             {mappedQuestions[currentIdx]}
-                            <img className="octocat" src="/assets/octocat.gif" alt="" />
+                            {character === 'octocat' ?
+                            <img className="octocat" src="/assets/ococat.gif" alt="octocat" />
+                            : character === 'kitty' ?
+                            <img className="kitty" src="/assets/kitty.gif" alt="kitty" />
+                            : character === 'witch' ?
+                            <img className="witch" src="/assets/witch.gif" alt="witch" />
+                            :
+                            <img className="skeleton" src="/assets/skeleton.gif" alt="skeleton" />
+                            }
                         </div> 
                     </>
                     : (<div className="game-over">

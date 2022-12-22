@@ -9,6 +9,7 @@ export default function HomePage({ user, questions, setQuestions, currentPage, s
     const [backButton, setBackButton] = useState(false);
     const [selectedCategory, setSelectedCategory] = useState('');
     const [showQuizPage, setShowQuizPage] = useState(false);
+    const [character, setCharacter] = useState('./assets/octocat.gif');
 
     const handleLeaderboard = evt => {
         setIsShown(current => !current);
@@ -21,7 +22,17 @@ export default function HomePage({ user, questions, setQuestions, currentPage, s
 
     return (
         <>
-            {showQuizPage ? <QuizPage user={user} questions={questions} setQuestions={setQuestions} selectedCategory={selectedCategory} currentPage={currentPage} setCurrentPage={setCurrentPage} /> :
+            {showQuizPage ?
+            <QuizPage
+                user={user}
+                questions={questions}
+                etQuestions={setQuestions}
+                selectedCategory={selectedCategory}
+                currentPage={currentPage}
+                setCurrentPage={setCurrentPage}
+                character={character}
+                setCharacter={setCharacter}
+            /> :
             <main>
                 <Title />
                 <div className="pixel" onClick={handlePlayClick}>
@@ -34,13 +45,20 @@ export default function HomePage({ user, questions, setQuestions, currentPage, s
                 <div className="categories">
                     <label>Category:</label>
                     <select onChange={(evt) => { setSelectedCategory(evt.target.value) }}>
-                    <option value="">All</option>
-                    <option value="Code">Code</option>
-                    <option value="SQL">SQL</option>
-                    <option value="DevOps">DevOps</option>
-                    <option value="Linux">Linux</option>
-                    <option value="Docker">Docker</option>
-                    <option value="CMS">CMS</option>
+                        <option value="">All</option>
+                        <option value="Code">Code</option>
+                        <option value="SQL">SQL</option>
+                        <option value="DevOps">DevOps</option>
+                        <option value="Linux">Linux</option>
+                        <option value="Docker">Docker</option>
+                        <option value="CMS">CMS</option>
+                    </select>
+                    <label>Character:</label>
+                    <select onChange={event => setCharacter(event.target.value)}>
+                        <option value="octocat">Octocat</option>
+                        <option value="kitty">Kitty</option>
+                        <option value="witch">Witch</option>
+                        <option value="skeleton">Skeleton</option>
                     </select>
                 </div>
             </main>

@@ -83,9 +83,13 @@ Allow users to choose their environments (backgrounds) at the start of the game.
 
 Octocat GIF by <a href="https://github.com/cameronmcefee">Cameron Mcefee</a>
 
-Parallax Background Images by <a href="https://edermuniz.carrd.co/">Eder Muniz</a>
+Kitty + Witch GIFs by <a href="https://9e0.itch.io/">9E0</a>
+
+Skeleton GIF by <a href="https://www.jessemunguia.com/">Jesse Munguia</a>
 
 Monster GIF by <a href="https://pixfinity.carrd.co/">Pixfinity</a>
+
+Parallax Background Images by <a href="https://edermuniz.carrd.co/">Eder Muniz</a>
 
 Music/Sound Effects by <a href="https://abstractionmusic.com/">Abstraction</a>
 
