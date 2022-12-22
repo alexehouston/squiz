@@ -122,8 +122,13 @@ label, select, option {
   z-index: 0;
 }
 
-span, label, select, option {
+span, label, select, option, ul, li, .auth-button {
   font-family: 'VT323', monospace;
+  text-transform: uppercase;
+}
+
+.auth-button p {
+  color: white;
 }
 
 .leaderboard {
