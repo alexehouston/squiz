@@ -131,10 +131,6 @@ input {
   width: 90px;
 }
 
-select {
-  font-size: 4vmin;
-}
-
 .pixel {
   color: white;
 }
