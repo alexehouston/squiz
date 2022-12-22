@@ -129,6 +129,7 @@ span, label, select, option, ul, li, #auth-button {
 
 .pixel {
   color: white;
+  -webkit-text-fill-color: white;
 }
 
 .leaderboard {
