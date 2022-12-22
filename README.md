@@ -35,11 +35,11 @@ Squiz is a full MERN-stack single-page web application & quiz game created with 
 <details>
     <summary>:gear: Functionality</summary>
         <h3 align="center">Home Page</h3>
-        <p align="center"><img src="" width="800"></p>
+        <p align="center"><img src="public/img/categories.gif" width="800"></p>
         <h3 align="center">Leaderboard</h3>
-        <p align="center"><img src="" width="800"></p>
+        <p align="center"><img src="public/img/leaderboard.gif" width="800"></p>
         <h3 align="center">Gameplay</h3>
-        <p align="center"><img src=""width="800"></p>
+        <p align="center"><img src="public/img/gameplay.gif"width="800"></p>
 </details>
 
 ## :computer: Technologies Used
