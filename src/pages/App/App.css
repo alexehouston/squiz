@@ -55,8 +55,6 @@ a:hover {
 .pixel {
   font-size: 25px;
   color: white;
-  background-color: black;
-  border-radius: 250px;
   height: auto;
   margin: 2vmin;
   font-family: 'VT323';
