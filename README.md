@@ -69,8 +69,6 @@ Squiz is a full MERN-stack single-page web application & quiz game created with 
 
 Allow users to choose between Easy, Normal and Hard modes at the start of the game.
 
-Allow users to choose their character at the start of the game.
-
 Allow users to choose their environments (backgrounds) at the start of the game.
 
 # Credits
