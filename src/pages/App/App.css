@@ -126,10 +126,22 @@ label, select, option {
   z-index: 5;
 }
 
-/* @media only screen and (max-width: 500px) {
+@media only screen and (max-width: 900px) {
 
   #myCanvas {
-
+    width: 150vw;
+    transform: translate(-50%, -50%);
+    left: 25%;
   }
 
-} */
+}
+
+@media only screen and (max-width: 500px) {
+
+  #myCanvas {
+    width: 250vw;
+    transform: translate(-50%, -50%);
+    left: -24.8%;
+  }
+
+}
