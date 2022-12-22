@@ -20,10 +20,10 @@ export default function AuthPage({ user, setUser, currentPage, setCurrentPage })
         :
           <LoginForm setUser={setUser} />
         }
-        <button className="pixel" id="auth-button" onClick={() => {
+        <div className="pixel" id="auth-button" onClick={() => {
           setShowSignUp(!showSignUp);
           setCurrentPage('home');
-        }}>{showSignUp ? 'Log In' : 'Sign Up'}</button>
+        }}><p>{showSignUp ? 'Log In' : 'Sign Up'}</p></div>
       </>
     }
     </main>

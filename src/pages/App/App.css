@@ -102,11 +102,6 @@ a:hover {
   cursor: pointer;
 }
 
-button {
-  background-color: black;
-  border-radius: 50px;
-}
-
 ul, li {
   list-style-type: '\1F47E';
   list-style-position: inside;
