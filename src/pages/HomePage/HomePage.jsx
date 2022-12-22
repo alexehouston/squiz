@@ -21,7 +21,7 @@ export default function HomePage({ user, questions, setQuestions, currentPage, s
 
     return (
         <>
-            {showQuizPage ?
+            {currentPage === 'quiz' ?
             <QuizPage
                 user={user}
                 questions={questions}

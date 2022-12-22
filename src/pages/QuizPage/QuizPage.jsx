@@ -34,7 +34,7 @@ export default function QuizPage({ questions, setQuestions, user, selectedCatego
     }, [selectedCategory]);
 
     const handleHomeClick = () => {
-        setShowHomePage(true);
+        // setShowHomePage(true);
         setCurrentPage('home');
     };
 
