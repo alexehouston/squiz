@@ -137,7 +137,6 @@ select {
 
 .pixel {
   color: white;
-  -webkit-text-fill-color: white;
 }
 
 .leaderboard {
