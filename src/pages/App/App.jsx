@@ -10,6 +10,7 @@ import './App.css';
 export default function App() {
   const [user, setUser] = useState(getUser());
   const [questions, setQuestions] = useState([]);
+  const [showQuizPage, setShowQuizPage] = useState(false);
   const [currentPage, setCurrentPage] = useState('home');
   const audioRef = useRef(null);
 
@@ -27,8 +28,8 @@ export default function App() {
       <audio ref={audioRef} autoPlay loop />
       { user ?
           <>
-            <NavBar user={user} setUser={setUser} currentPage={currentPage} setCurrentPage={setCurrentPage} />
-            <HomePage user={user} questions={questions} setQuestions={setQuestions} currentPage={currentPage} setCurrentPage={setCurrentPage} />
+            <NavBar user={user} setUser={setUser} currentPage={currentPage} setCurrentPage={setCurrentPage} showQuizPage={showQuizPage} setShowQuizPage={setShowQuizPage} />
+            <HomePage user={user} questions={questions} setQuestions={setQuestions} currentPage={currentPage} setCurrentPage={setCurrentPage} showQuizPage={showQuizPage} setShowQuizPage={setShowQuizPage} />
           </>
           :
           <AuthPage setUser={setUser} currentPage={currentPage} setCurrentPage={setCurrentPage} />

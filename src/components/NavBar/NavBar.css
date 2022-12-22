@@ -19,6 +19,12 @@ nav {
     right: 1%;
 }
 
+#back {
+    position: fixed;
+    top: 1%;
+    right: 20%;
+}
+
 @media only screen and (max-width: 500px) {
     
     .welcome {

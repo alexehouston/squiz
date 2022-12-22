@@ -84,3 +84,5 @@ Monster GIF by <a href="https://pixfinity.carrd.co/">Pixfinity</a>
 Parallax Background Images by <a href="https://edermuniz.carrd.co/">Eder Muniz</a>
 
 Music/Sound Effects by <a href="https://abstractionmusic.com/">Abstraction</a>
+
+Quiz Questions by <a href="https://quizapi.io/">QuizAPI</a>

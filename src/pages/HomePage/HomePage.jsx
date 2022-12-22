@@ -4,11 +4,10 @@ import Title from '../../components/Title/Title';
 import QuizPage from '../../pages/QuizPage/QuizPage';
 import './HomePage.css';
 
-export default function HomePage({ user, questions, setQuestions, currentPage, setCurrentPage }) {
+export default function HomePage({ user, questions, setQuestions, currentPage, setCurrentPage, showQuizPage, setShowQuizPage }) {
     const [isShown, setIsShown] = useState(false);
     const [backButton, setBackButton] = useState(false);
     const [selectedCategory, setSelectedCategory] = useState('');
-    const [showQuizPage, setShowQuizPage] = useState(false);
     const [character, setCharacter] = useState('octocat');
 
     const handleLeaderboard = evt => {
