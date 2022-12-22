@@ -9,7 +9,7 @@ export default function HomePage({ user, questions, setQuestions, currentPage, s
     const [backButton, setBackButton] = useState(false);
     const [selectedCategory, setSelectedCategory] = useState('');
     const [showQuizPage, setShowQuizPage] = useState(false);
-    const [character, setCharacter] = useState('./assets/octocat.gif');
+    const [character, setCharacter] = useState('octocat');
 
     const handleLeaderboard = evt => {
         setIsShown(current => !current);

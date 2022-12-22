@@ -122,6 +122,10 @@ label, select, option {
   z-index: 0;
 }
 
+span, label, select, option {
+  font-family: 'VT323', monospace;
+}
+
 .leaderboard {
   z-index: 5;
 }

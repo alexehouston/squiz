@@ -147,9 +147,26 @@
         width: 8vmin;
     }
 
-   .octocat {
-      width: 30vmin;
-   }
+    .octocat {
+        width: 30vmin;
+    }
+
+    .kitty {
+        width: 25vmin;
+        bottom: 10%;
+        left: 10%;
+    }
+
+    .witch {
+        width: 35vmin;
+        left: 7%;
+        bottom: 11%;
+    }
+
+    .skeleton {
+        width: 20vmin;
+        left: 18%;
+    }
 
    @keyframes slide-right {
     0% { left: -10% }

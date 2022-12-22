@@ -67,7 +67,7 @@ export default function QuizPage({ questions, setQuestions, user, selectedCatego
                         <div className="questionaire">
                             {mappedQuestions[currentIdx]}
                             {character === 'octocat' ?
-                            <img className="octocat" src="/assets/ococat.gif" alt="octocat" />
+                            <img className="octocat" src="/assets/octocat.gif" alt="octocat" />
                             : character === 'kitty' ?
                             <img className="kitty" src="/assets/kitty.gif" alt="kitty" />
                             : character === 'witch' ?
