@@ -26,8 +26,6 @@ Squiz is a full MERN-stack single-page web application & quiz game created with 
         <p align="center"><img src="public/img/wireframes/components.png" width="800"><p>
 </details>
 
-lolol
-
 <br>
 
 <details>
