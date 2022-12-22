@@ -4,7 +4,7 @@
 
 <div align="center">
 
-##### Created by <a href="https://alexehouston.github.io/portfolio/">Alex E. Houston</a>
+##### Created by <a href="https://alexehouston.github.io/portfolio/" target=”_blank”>Alex E. Houston</a>
 
 [![GitHub Badge](https://img.shields.io/github/followers/alexehouston?label=Follow&style=social)](https://www.github.com/alexehouston/)
 
@@ -14,7 +14,7 @@
 
 Squiz is a full MERN-stack single-page web application & quiz game created with React.js. Squiz tests your knowledge on software development and makes learning fun.
 
-<a href="https://trello.com/b/bAEDRVM1/squiz">Trello Board</a> | <a href="https://squiz.herokuapp.com/">Deployed Link</a>
+<a href="https://trello.com/b/bAEDRVM1/squiz" target=”_blank”>Trello Board</a> | <a href="https://squiz.herokuapp.com/" target=”_blank”>Deployed Link</a>
 
 <br>
 
@@ -56,14 +56,16 @@ Squiz is a full MERN-stack single-page web application & quiz game created with 
 
 # :computer: Technologies Used
 
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-![Express.JS](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
-![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
-![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
+<div align=center>
+<img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" />
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)" />
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
+<img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" />
+<img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express&logoColor=white" />
+<img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" />
+<img src="https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens" />
+<img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white" />
+</div>
 
 # :fast_forward: Next Steps
 
@@ -73,16 +75,16 @@ Allow users to choose their environments (backgrounds) at the start of the game.
 
 # Credits
 
-Octocat GIF by <a href="https://github.com/cameronmcefee">Cameron Mcefee</a>
+Octocat GIF by <a href="https://github.com/cameronmcefee" target=”_blank”>Cameron Mcefee</a>
 
-Kitty + Witch GIFs by <a href="https://9e0.itch.io/">9E0</a>
+Kitty + Witch GIFs by <a href="https://9e0.itch.io/" target=”_blank”>9E0</a>
 
-Skeleton GIF by <a href="https://www.jessemunguia.com/">Jesse Munguia</a>
+Skeleton GIF by <a href="https://www.jessemunguia.com/" target=”_blank”>Jesse Munguia</a>
 
-Monster GIF by <a href="https://pixfinity.carrd.co/">Pixfinity</a>
+Monster GIF by <a href="https://pixfinity.carrd.co/" target=”_blank”>Pixfinity</a>
 
-Parallax Background Images by <a href="https://edermuniz.carrd.co/">Eder Muniz</a>
+Parallax Background Images by <a href="https://edermuniz.carrd.co/" target=”_blank”>Eder Muniz</a>
 
-Music/Sound Effects by <a href="https://abstractionmusic.com/">Abstraction</a>
+Music/Sound Effects by <a href="https://abstractionmusic.com/" target=”_blank”>Abstraction</a>
 
-Quiz Questions by <a href="https://quizapi.io/">QuizAPI</a>
+Quiz Questions by <a href="https://quizapi.io/" target=”_blank”>QuizAPI</a>
