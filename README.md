@@ -2,47 +2,51 @@
     <img src="public/img/squiz-logo.png" width="800">
 </div>
 
-<div id="description" align="center">
+<div align="center">
 
-#
+##### Created by <a href="https://alexehouston.github.io/portfolio/">Alex E. Houston</a>
 
-### [CLICK TO DEMO](https://squiz.herokuapp.com/)
-
-##### Created by Alex E. Houston
+<br>
 
 [![GitHub Badge](https://img.shields.io/github/followers/alexehouston?label=Follow&style=social)](https://www.github.com/alexehouston/)
 
-## :pencil: Description
+<br/><br/>
+
+# :pencil: Description
 
 Squiz is a full MERN-stack single-page web application & quiz game created with React.js. Squiz tests your knowledge on software development and makes learning fun.
 
-</div>
+<a href="https://trello.com/b/bAEDRVM1/squiz">Trello Board</a> | <a href="https://squiz.herokuapp.com/">Deployed Link</a>
+
+<br>
 
 <details>
     <summary>:art: Wireframes</summary>
         <p align="center"><img src="public/img/wireframes/home.png" width="800"></p>
-        <p align="center"><img src="public/img/wireframes/leaderboard.png" width="800"></p>
+        <p align="center"><img src="public/img/wireframes/leaderboard.png" width="800"><p>
         <p align="center"><img src="public/img/wireframes/gameplay.png" width="800"></p>
-        <p align="center"><img src="public/img/wireframes/components.png" width="800"></p>
-
+        <p align="center"><img src="public/img/wireframes/components.png" width="800"><p>
 </details>
+
+<br>
 
 <details>
     <summary>:file_folder: ERD</summary>
         <p align="center"><img src="public/img/erd.png" width="800"></p>
 </details>
 
-<details>
-    <summary>:gear: Functionality</summary>
-        <h3 align="center">Home Page</h3>
-        <p align="center"><img src="public/img/categories.gif" width="800"></p>
-        <h3 align="center">Leaderboard</h3>
-        <p align="center"><img src="public/img/leaderboard.gif" width="800"></p>
-        <h3 align="center">Gameplay</h3>
-        <p align="center"><img src="public/img/gameplay.gif"width="800"></p>
-</details>
+<br>
 
-## :computer: Technologies Used
+# :gear: Functionality
+
+<h4 align="center">Home Page</h4>
+<p align="center"><img src="public/img/categories.gif" width="800"></p>
+<h4 align="center">Leaderboard</h4>
+<p align="center"><img src="public/img/leaderboard.gif" width="800"></p>
+<h4 align="center">Gameplay</h4>
+<p align="center"><img src="public/img/gameplay.gif"width="800"></p>
+
+# :computer: Technologies Used
 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
@@ -53,26 +57,12 @@ Squiz is a full MERN-stack single-page web application & quiz game created with 
 ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
 ![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
 
-## :link: Links
+# :fast_forward: Next Steps
 
-<details>
-  <summary>Trello Board</summary>
-  <a href="https://trello.com/b/bAEDRVM1/squiz">Click here!</a>
-</details>
+Allow users to choose between Easy, Normal and Hard modes at the start of the game.
 
-<details>
-  <summary>Deployed Link</summary>
-  <a href="https://squiz.herokuapp.com/">Squiz</a>
-</details>
+Allow users to choose their character at the start of the game.
 
-## :fast_forward: Next Steps
+Allow users to choose their environments (backgrounds) at the start of the game.
 
-### Upcoming Features
-
-- [ ] Allow users to choose between Easy, Normal and Hard modes at the start of the game.
-
-- [ ] Allow users to choose their character at the start of the game.
-
-- [ ] Allow users to choose their environments (backgrounds) at the start of the game.
-
-- [ ] Allow users to choose the topic they'd like to be quizzed on at the start of the game.
+</div>
