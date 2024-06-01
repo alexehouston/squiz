@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[build.environment]
+  NODE_VERSION = "19.8.1"
+
+[functions]
+  directory = "netlify/functions"

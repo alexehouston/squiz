@@ -10,7 +10,7 @@ export default function QuizPage({ questions, setQuestions, user, selectedCatego
     const [currentIdx, setCurrentIdx] = useState(0);
     const [score, setScore] = useState(0);
     const [chances, setChances] = useState(3);
-    const [showHomePage, setShowHomePage] = useState(false);
+    const [showHomePage] = useState(false);
 
     useEffect(() => {
         async function randomQuestions(selectedCategory) {
